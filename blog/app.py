@@ -1,5 +1,12 @@
-from flask import Flask
-app = Flask(__name__)
-@app.route("/")
-def index():
-    return "Hello web!"
+from flask import Flask, render_template
+from blog.user.views import user
+
+
+def create_app() -> Flask:
+    app = Flask(__name__)
+    register_blueprints(app)
+    return app
+
+
+def register_blueprints(app: Flask):
+    app.register_blueprint(user)
