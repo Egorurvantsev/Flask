@@ -8,7 +8,6 @@ ARTICLES = {
     2: {'text': 'wasd', 'author': 1},
     3: {'text': 'russiaisgood', 'author': 1},
     4: {'text': 'americaissuck', 'author': 3},
-
 }
 
 
@@ -22,6 +21,6 @@ def get_article(pk: int):
     try:
         article_name = ARTICLES[pk]
     except KeyError:
-        return redirect('/acticles/')
+        return redirect('/articles/')
 
     return render_template('articles/detail.html', article=article_name)
