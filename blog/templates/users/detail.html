@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    User Detail
+{% endblock %}
+
+{% block body %}
+    <h2>User Detail</h2>
+    <ul>
+        {% for item in user %}
+            <li>{{ item }}: {{ user.get(item) }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
