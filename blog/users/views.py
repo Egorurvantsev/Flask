@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template
+from flask_login import login_required
+from werkzeug.exceptions import NotFound
 
 user = Blueprint('users', __name__, url_prefix='/users', static_folder='../static')
 
@@ -12,14 +14,18 @@ USERS = {
 
 @user.route('/')
 def user_list():
-    return render_template('users/list.html', users=USERS)
+    from blog.models import User
+    users = User.query.all()
+    return render_template('users/list.html', users=users)
 
 
 @user.route('/<int:pk>')
-def get_user(pk: int):
+# @login_required
+def profile(pk: int):
+    from blog.models import User
     try:
-        user_name = USERS[pk]
+        _user = User.query.filter_by(id=pk).one_or_none()
     except KeyError:
-        return redirect('/users/')
+        raise NotFound(f'Пользователя с id {pk} не существует')
 
-    return render_template('users/detail.html', user=user_name)
+    return render_template('users/profile.html', user=_user)
