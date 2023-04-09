@@ -7,8 +7,6 @@
 {% block body %}
     <h2>User Detail</h2>
     <ul>
-        {% for item in user %}
-            <li>{{ item }}: {{ user.get(item) }}</li>
-        {% endfor %}
+        <li>{{ user.email }}</li>
     </ul>
 {% endblock %}
