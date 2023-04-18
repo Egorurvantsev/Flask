@@ -2,12 +2,11 @@ from flask import Flask
 
 from blog import commands
 from blog.extensions import db, login_manager, migrate
-from blog.models import User
+from blog.users.models import User
 
 
 def create_app() -> Flask:
     app = Flask(__name__)
-    # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
     app.config.from_object('blog.config')
 
     register_extensions(app)
