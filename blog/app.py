@@ -7,6 +7,7 @@ from blog.models import User
 
 def create_app() -> Flask:
     app = Flask(__name__)
+    # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
     app.config.from_object('blog.config')
 
     register_extensions(app)
