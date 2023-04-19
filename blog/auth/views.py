@@ -1,16 +1,22 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from flask_login import logout_user, login_user, login_required
+from flask_login import logout_user, login_user, login_required, current_user
 from werkzeug.security import check_password_hash
 
+from blog.users.models import User
 
 auth = Blueprint('auth', __name__, static_folder='../static')
 
-@auth.route('/login', methods=['POST', 'GET'])
-def login():
-    from blog.models import User
-    if request.method == 'GET':
-        return render_template('auth/login.html')
 
+@auth.route('/login', methods=('GET',))
+def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('users.profile', pk=current_user.id))
+
+    return render_template('auth/login.html')
+
+
+@auth.route('/login', methods=('POST',))
+def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
     user = User.query.filter_by(email=email).first()
@@ -24,7 +30,7 @@ def login():
 
 
 @auth.route('/logout')
-# @login_required
+@login_required
 def logout():
     logout_user()
     return redirect(url_for('.login'))
