@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from flask_login import login_required
 from werkzeug.exceptions import NotFound
-from blog.users.models import User
+from blog.models import User
 
 user = Blueprint('users', __name__, url_prefix='/users', static_folder='../static')
 

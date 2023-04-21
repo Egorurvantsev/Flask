@@ -6,7 +6,7 @@ from blog.extensions import db
 
 @click.command('create-init-user')
 def create_init_user():
-    from blog.users.models import User
+    from blog.models import User
     from wsgi import app
 
     with app.app_context():
