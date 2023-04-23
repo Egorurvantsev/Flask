@@ -9,10 +9,13 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(255), unique=True)
     firstname = db.Column(db.String(255))
+    lastname = db.Column(db.String(255))
     password = db.Column(db.String(255))
 
-    def __init__(self, email, password):
+    def __init__(self, email, firstname, lastname,  password):
         self.email = email
+        self.firstname = firstname
+        self.lastname = lastname
         self.password = password
 
 
