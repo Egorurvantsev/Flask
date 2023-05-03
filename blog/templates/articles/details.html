@@ -5,14 +5,23 @@
 {% endblock %}
 
 {% block body %}
-    <div>
+    <div class="row">
         <h1>{{ article.title }}</h1>
-        <p>{{ article.text }}</p>
-        Другое:
-        <ul>
-            <li><a href="{{ url_for('users.profile', pk=article.author.user.id) }}">Автор: {{ article.author.user.firstname }}</a></li>
-            <li>Дата создания: {{ article.created_at }}</li>
-            <li>Дата изменения: {{ article.updated_at }}</li>
-        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-12">{{ article.text }}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div><small class="text-muted">Автор: <a href="{{ url_for('users.profile', pk=article.author.user.id) }}">{{ article.author.user.firstname }}</a></small></div>
+            <div><small class="text-muted">Created at: {{ article.created_at }}</small></div>
+            <div><small class="text-muted">Updated at: {{ article.updated_at }}</small></div>
+        </div>
+        <div class="col-6">
+            {% for tag in article.tags %}
+                <span class="badge bg-primary">{{ tag.name }}</span>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
