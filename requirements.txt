@@ -7,9 +7,11 @@ dnspython==2.3.0
 docker==6.0.1
 email-validator==2.0.0.post2
 Flask==2.2.3
+Flask-Admin==1.6.1
 Flask-Login==0.6.2
 Flask-Migrate==3.0.0
 Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
 greenlet==2.0.2
 idna==3.4
 itsdangerous==2.1.2
@@ -26,4 +28,3 @@ urllib3==1.26.15
 websocket-client==1.5.1
 Werkzeug==2.2.3
 WTForms==3.0.1
-Flask-WTF==1.1.1

@@ -10,7 +10,7 @@ def create_init_user():
 
     with app.app_context():
         db.session.add(
-            User(email='egor@gmail.om', password=generate_password_hash('egorka'))
+            User(email='egor@gmail.om', password=generate_password_hash('123'), firstname='Egor', lastname='Urvantsev')
         )
         db.session.commit()
 
