@@ -4,9 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d06d4ef-637f-4835-b4b2-0d9167c24391" name="Changes" comment="Articles`s and Authors`s methods">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/db.sqlite" afterDir="false" />
+    <list default="true" id="1d06d4ef-637f-4835-b4b2-0d9167c24391" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/blog/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/admin/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/admin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/extensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/db.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/16c4c1f7480d_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/47ea0bd59c41_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6b27dfec16e5_add_email_field_to_user_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7302a24c95ae_acticles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/774d5209526c_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7f71cb6d1432_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/bed8f0772cc4_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_6" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +70,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson_7" />
+                    <option name="lastUsedInstant" value="1682873666" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1682872344" />
@@ -89,26 +114,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/egoru/GeekBrains/Flask/blog/templates/authors&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/egoru/GeekBrains/Flask/instance/db.sqlite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\egoru\GeekBrains\Flask\blog\templates\authors" />
@@ -127,7 +152,29 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Python.wsgi">
+  <component name="RunManager" selected="Python.Flask">
+    <configuration name="Flask" type="PythonConfigurationType" factoryName="Python">
+      <module name="Flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blog/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,6 +291,9 @@
       <workItem from="1682094327493" duration="17203000" />
       <workItem from="1682512802901" duration="12241000" />
       <workItem from="1682872246727" duration="682000" />
+      <workItem from="1682929296017" duration="2475000" />
+      <workItem from="1683126270929" duration="6699000" />
+      <workItem from="1683202637437" duration="19196000" />
     </task>
     <task id="LOCAL-00002" summary="add blueprint">
       <created>1679936839065</created>
@@ -329,7 +379,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682532989558</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="create Tag Table">
+      <created>1682931613817</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682931613817</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix">
+      <created>1682931625901</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682931625901</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +406,16 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="31efe83a-e591-4514-8a7d-5fdacb0d5c35">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="9a207f73-fbdc-4fe2-894e-fdd87fab9bdf">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -375,9 +449,12 @@
     <MESSAGE value="create register form" />
     <MESSAGE value="create Authors table" />
     <MESSAGE value="Articles`s and Authors`s methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Articles`s and Authors`s methods" />
+    <MESSAGE value="create Tag Table" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Flask$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1682929662046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Flask$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1681391199060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flask$views.coverage" NAME="views Coverage Results" MODIFIED="1680111713985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog/user" />
     <SUITE FILE_PATH="coverage/Flask$app.coverage" NAME="app Coverage Results" MODIFIED="1681382559368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />

@@ -23,12 +23,16 @@ class User(db.Model, UserMixin):
     firstname = db.Column(db.String(255))
     lastname = db.Column(db.String(255))
     password = db.Column(db.String(255))
+    is_staff = db.Column(db.Boolean, default=False)
 
     author = relationship('Author', uselist=False, back_populates='user')
 
-    def __init__(self, email, firstname, lastname,  password):
+    def __init__(self, email, password):
         self.email = email
         self.password = password
+
+    def __str__(self):
+        return f'{self.user.email} ({self.user.id})'
 
 
 class Author(db.Model):
@@ -39,6 +43,9 @@ class Author(db.Model):
 
     user = relationship('User', back_populates='author')
     articles = relationship('Article', back_populates='author')
+
+    def __str__(self):
+        return self.user.firstname
 
 
 class Article(db.Model):
@@ -62,3 +69,6 @@ class Tag(db.Model):
     name = db.Column(db.String(255), nullable=False)
 
     articles = relationship('Article', secondary=article_tag_associations_table, back_populates='tags')
+
+    def __str__(self):
+        return self.name
